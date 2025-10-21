@@ -1,12 +1,14 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 
-import Message from "./src/paginas/Mensagem/index";
+// import Message from "./src/paginas/Mensagem/index";
+import About from "./src/paginas/Sobre/index"
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Message />
+      {/* <Message /> */}
+      <About />
     </View>
   );
 }
@@ -14,7 +16,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    // backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
   },

@@ -1,15 +1,12 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+// import { NavigationContainer } from '@react-navigation/native';
+import Navigation from './src/rotas/navigation';
 
-// import Message from "./src/paginas/Mensagem/index";
-import About from "./src/paginas/Sobre/index"
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      {/* <Message /> */}
-      <About />
-    </View>
+    <Navigation/>
   );
 }
 

@@ -31,11 +31,8 @@ export default function Form(){
             <Text style={{marginBottom: 10,color: "#3772FF",  fontWeight:"bold", fontSize: 16}}>Mensagem</Text>
             <TextInput placeholder="Escreva sua mensagem" style={{borderWidth: 1, borderRadius: 16, backgroundColor: "#FFFFFF", width:264, height: 160, color: "#BCBCBC", borderColor: "#eae9e9f8"}}></TextInput>
           </View>
-
           <Button/>
         </View>
-
-        
 
       </View>
     

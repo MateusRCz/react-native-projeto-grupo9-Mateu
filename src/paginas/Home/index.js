@@ -14,6 +14,7 @@ export default function Home(){
         <Button onPress={() => navigation.navigate('Inbox')} title="Inbox" na/>
         <Button onPress={() => navigation.navigate('Login')} title="Login"/>
         <Button onPress={() => navigation.navigate('Message')} title="Message"/>
+        <Button onPress={() => navigation.navigate('BasePage')} title="BasePage"/>
         <Button onPress={() => navigation.navigate('Profile')} title="Profile"/>
         <Button onPress={() => navigation.navigate('About')} title="About"/>
       </View>

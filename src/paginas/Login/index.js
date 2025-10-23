@@ -1,34 +1,114 @@
-import React from "react";
-import { StyleSheet, View, Pressable, Image, ScrollView, Text, Button } from "react-native";
-import {useNavigation} from '@react-navigation/native';
+import React, { useState } from 'react';
+import { View, Text, TextInput, TouchableOpacity, Alert, Image, StyleSheet, ScrollView } from 'react-native';
 
-export default function Login(){
-  const navigation = useNavigation();
-  
+export default function LoginScreen() {
+  const [nome, setNome] = useState('');
+  const [senha, setSenha] = useState('');
+
+  const handleLogin = () => {
+    if (!nome || !senha) {
+      Alert.alert('Erro', 'Por favor, preencha todos os campos.');
+      return;
+    }
+
+    // Simulação de login
+    Alert.alert('Bem-vindo!', 'Login realizado com sucesso!');
+  };
+
   return (
-    <View style={estilos.tela}>
-      <Text>Você está na tela de Login</Text>
-      <View>
-        <Button onPress={() => navigation.navigate('Home')} title="Home"></Button> 
-        <Button onPress={() => navigation.navigate('Register')} title="Register" na/>
-        <Button onPress={() => navigation.navigate('Inbox')} title="Inbox" na/>
-        {/* <Button onPress={() => navigation.navigate('Login')} title="Login"/> */}
-        <Button onPress={() => navigation.navigate('Message')} title="Message"/>
-        <Button onPress={() => navigation.navigate('Profile')} title="Profile"/>
-        <Button onPress={() => navigation.navigate('About')} title="About"/>
-      </View>
-    </View>
+    <ScrollView contentContainerStyle={styles.container}>
+      <Image source={require('../../assets/ilustracao.svg')} style={styles.headerImage} />
+      <Text style={styles.logo}>adopet</Text>
+
+      <Text style={styles.title}>Já tem conta? Faça seu login:</Text>
+
+      <Text style={styles.label}>Nome</Text>
+      <TextInput
+        style={styles.input}
+        placeholder="Digite seu nome completo"
+        placeholderTextColor="#bcbcbc"
+        value={nome}
+        onChangeText={setNome}
+      />
+
+      <Text style={styles.label}>Senha</Text>
+      <TextInput
+        style={styles.input}
+        placeholder="Digite sua senha"
+        placeholderTextColor="#bcbcbc"
+        secureTextEntry
+        value={senha}
+        onChangeText={setSenha}
+      />
+
+      <TouchableOpacity>
+        <Text style={styles.forgotText}>Esqueci minha senha.</Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity style={styles.button} onPress={handleLogin}>
+        <Text style={styles.buttonText}>Entrar</Text>
+      </TouchableOpacity>
+    </ScrollView>
   );
 }
 
-const estilos = StyleSheet.create({
-  tela: {
-    // backgroundColor: "#ffffffff",
-    flex: 1,
-    width: "100%",
-    height: "100%",
-    justifyContent: "center",
-    alignItems: "center",
+const styles = StyleSheet.create({
+  container: {
+    flexGrow: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    paddingVertical: 20,
+  },
+  headerImage: {
+    width: '100%',
+    height: 180,
+    resizeMode: 'cover',
+  },
+  logo: {
+    fontSize: 28,
+    color: '#3772FF',
+    fontWeight: 'bold',
+    marginTop: -140,
+    marginBottom: 120,
+    textAlign: 'center',
+  },
+  title: {
+    color: '#3772FF',
+    fontSize: 15,
+    fontWeight: '600',
+    marginBottom: 25,
+  },
+  label: {
+    fontWeight: 'bold',
+    color: '#6E6E6E',
+    alignSelf: 'flex-start',
+    marginLeft: '10%',
+  },
+  input: {
+    width: '80%',
+    backgroundColor: '#F5F5F5',
+    borderRadius: 10,
+    padding: 10,
+    marginBottom: 15,
+    alignSelf: 'center',
+  },
+  forgotText: {
+    color: '#FF5E5B',
+    alignSelf: 'flex-start',
+    marginLeft: '10%',
+    marginBottom: 15,
+    textDecorationLine: 'underline',
+    fontSize: 12,
+  },
+  button: {
+    backgroundColor: '#FF5E5B',
+    paddingVertical: 12,
+    paddingHorizontal: 40,
+    borderRadius: 10,
+  },
+  buttonText: {
+    color: '#fff',
+    fontWeight: '600',
+    fontSize: 16,
   },
 });
-

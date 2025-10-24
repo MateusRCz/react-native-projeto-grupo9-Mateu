@@ -6,7 +6,7 @@ export default function Footer(){
 
   return (
     <View style={estilos.tela}>
-        <Text style={{fontSize: 12, color: "#FFFFFF"}}>2023 - Desenvolvido por Alura. Projeto fictício sem fins comerciais.</Text>
+        <Text style={estilos.text}>2023 - Desenvolvido por Alura. Projeto fictício sem fins comerciais.</Text>
     </View>
   );
 }
@@ -20,5 +20,9 @@ const estilos = StyleSheet.create({
     width: "100%",
     height: 80,
   },
+  text: {
+    fontSize: 12,
+    color: "#FFFFFF",
+  }
 });
 

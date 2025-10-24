@@ -11,8 +11,8 @@ export default function Message(){
 
   return (
     <View style={estilos.tela}>
+      <Header />
       <ScrollView style={{flexGrow: 1}}>
-        <Header />
         <Form />
         <NavTab/>
         <Footer/>

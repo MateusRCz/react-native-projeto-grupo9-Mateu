@@ -27,6 +27,7 @@ export default function CadastroScreen({ navigation }) {
   };
 
   return (
+
     <ScrollView contentContainerStyle={styles.container}>
       <Image source={require('../../assets/ilustracao.svg')} style={styles.headerImage} />
       <Text style={styles.logo}>adopet</Text>

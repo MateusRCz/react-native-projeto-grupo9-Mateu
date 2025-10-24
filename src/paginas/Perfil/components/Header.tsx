@@ -42,7 +42,7 @@ const estilos = StyleSheet.create({
     justifyContent:"space-around",
     flexDirection:"row",
     width: "100%",
-    gap: 170,
+    // gap: 170,
   },
   imageHeader: {
    width: "100%",

@@ -11,8 +11,8 @@ export default function About(){
 
   return (
     <View style={estilos.tela}>
+      <Header />
       <ScrollView style={{flexGrow: 1}}>
-        <Header />
         <Form />
         <NavTab/>
         <Footer/>
@@ -23,7 +23,7 @@ export default function About(){
 
 const estilos = StyleSheet.create({
   tela: {
-    // backgroundColor: "#ffffffff",
+    backgroundColor: "#ffffffff",
     flex: 1,
     width: "100%",
     height: "100%",

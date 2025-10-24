@@ -11,9 +11,11 @@ import Login from "../paginas/Login";
 import Message from "../paginas/Mensagem";
 import Profile from "../paginas/Perfil";
 import About from "../paginas/Sobre";
+import BasePage from "../paginas/PaginaBase";
+
 
 const RootStack = createNativeStackNavigator({
-  initialRouteName: 'Register',
+  initialRouteName: 'BasePage',
   screens: {
     Home: { 
       screen: Home,
@@ -36,6 +38,10 @@ const RootStack = createNativeStackNavigator({
     About: {
       screen: About,
     },
+    BasePage: {
+      screen: BasePage,
+    },
+
   },
   screenOptions: {
     headerShown: false,

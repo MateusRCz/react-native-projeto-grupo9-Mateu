@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, Alert, Image, StyleSheet, ScrollView } from 'react-native';
 
@@ -49,6 +50,7 @@ export default function LoginScreen() {
         <Text style={styles.buttonText}>Entrar</Text>
       </TouchableOpacity>
     </ScrollView>
+
   );
 }
 

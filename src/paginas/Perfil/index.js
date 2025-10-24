@@ -1,22 +1,25 @@
-import React from "react";
-import { StyleSheet, View, Pressable, Image, ScrollView, Text, Button } from "react-native";
-import {useNavigation} from '@react-navigation/native';
 
-export default function Profile(){
-  const navigation = useNavigation();
-  
+
+import React from "react";
+import { StyleSheet, View, Pressable, Image, ScrollView } from "react-native";
+
+import Header from "./components/Header";
+import Form from "./components/Form";
+import NavTab from "./components/NavTab"
+import Footer from "./components/Footer"
+import ImageUsuario from "./components/ImageUsuario";
+
+export default function Login(){
+
+
   return (
     <View style={estilos.tela}>
-      <Text>Você está na tela de Profile</Text>
-      <View>
-        <Button onPress={() => navigation.navigate('Home')} title="Home"></Button> 
-        <Button onPress={() => navigation.navigate('Register')} title="Register" na/>
-        <Button onPress={() => navigation.navigate('Inbox')} title="Inbox" na/>
-        <Button onPress={() => navigation.navigate('Login')} title="Login"/>
-        <Button onPress={() => navigation.navigate('Message')} title="Message"/>
-        {/* <Button onPress={() => navigation.navigate('Profile')} title="Profile"/> */}
-        <Button onPress={() => navigation.navigate('About')} title="About"/>
-      </View>
+      <Header />
+      <ScrollView style={{flexGrow: 1}}>
+        <Form/>
+        <NavTab/>
+        <Footer/>
+      </ScrollView>
     </View>
   );
 }
@@ -31,4 +34,3 @@ const estilos = StyleSheet.create({
     alignItems: "center",
   },
 });
-

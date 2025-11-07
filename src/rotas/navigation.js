@@ -15,7 +15,7 @@ import BasePage from "../paginas/PaginaBase";
 
 
 const RootStack = createNativeStackNavigator({
-  initialRouteName: 'BasePage',
+  initialRouteName: 'Inbox',
   screens: {
     Home: { 
       screen: Home,
